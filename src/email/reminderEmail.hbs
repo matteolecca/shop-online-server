@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<title>Login Task App</title>
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		body {
+			margin: 0;
+			font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+			font-weight: 300;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			line-height: 1.6;
+		}
+
+		.background {
+			padding-bottom: 20px;
+			width: 80%;
+			margin: 0 auto;
+		}
+
+		.wave {
+			height: 200px;
+			width: 100vw;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+		}
+
+		h1 {
+			text-align: center;
+		}
+
+		h2 {
+			margin-top: 50px;
+		}
+		.label{
+			text-transform: capitalize;
+		}
+		.container :nth-child(1) {
+			font-weight: 600;
+		}
+
+		.container {
+			margin: 25px 0;
+			padding: 5px 0;
+			display: grid;
+			grid-template-columns: 70%30%;
+			justify-content: space-between !important;
+			border-bottom: 1px solid rgba(200, 200, 200, 0.5);
+		}
+
+		.title {
+			font-weight: 600;
+			flex: 1 1;
+		}
+
+		.footer {
+			margin: 25px 0;
+		}
+
+		.main-title {
+			background-color: #9fd7ff;
+			color: #fff;
+			height: 150px;
+			text-transform: capitalize;
+		}
+
+		.main-title h1 {
+			margin: 0;
+			padding: 50px 0;
+		}
+	</style>
+</head>
+
+<body>
+	<div>
+		<!-- <div class="main-title">
+            <h1>Studio radiologico Lecca Deiana</h1>
+        </div> -->
+		<div class="background">
+			<h1>Promemoria prenotazione</h1>
+			<div class="confirm-container">
+				<p>Gentile {{name}}, le ricordiamo la sua prenotazione per domani presso il nostro studio.<br>Di seguito un riepilogo della prenotazione
+				</p>
+				<h2>Riepilogo prenotazione</h2>
+				<div class="container">
+					<label class="title">Nome</label>
+					<label>{{name}}</label>
+				</div>
+				<div class="container">
+					<label class="title">Esame</label>
+					<label>{{exam}}</label>
+				</div>
+				<div class="container">
+					<label class="title">Data</label>
+					<label>{{date}}</label>
+				</div>
+				<div class="container">
+					<label class="title">Orario</label>
+					<label>{{time}}</label>
+				</div>
+				<div class="footer">
+					<h2>Raccomandazioni</h2>
+					<p>Le ricordiamo che, se dovesse essere prevista una preparazione per il suo esame, può consultare
+						l'apposita pagina cliccando <a href="https://ecografia-app.herokuapp.com/preparazioni">qui</a>.</p>
+				</div>
+				<p>Cordiali saluti,<br> Studio Radiologico Dott Fabrizio Lecca, Dott Elisabetta Deiana.</p>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
