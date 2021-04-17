@@ -9,7 +9,7 @@ const cors = require('cors')
 const session = require('./src/session/session')
 
 var corsOptions = {
-    origin : [ 'http://localhost:3000','http://192.168.1.146:3000','http://192.168.1.146:3001', 'https://matteolecca-shop-online-server.herokuapp.com'],
+    origin : [ 'http://localhost:3000','http://192.168.1.146:3000','http://192.168.1.146:3001', 'https://matteolecca-shop-online-app.herokuapp.com'],
     credentials:true,
     methods:['GET','POST'],
     sameSite : 'none'
