@@ -1,9 +1,0 @@
-select 
-products.name, size, quantity,price, color, email, customers.name, customers.surname 
-from orderedproducts 
-join products 
-join orders 
-join customers 
-where orderedproducts.productID = products.ID 
-and orderID = orders.ID 
-and orders.customer = customers.ID;
