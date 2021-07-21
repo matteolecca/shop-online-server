@@ -12,13 +12,14 @@ exports.getProducts = async type => {
 exports.getCategories = async () =>{
     const query = "select category from categories"
     const result = await tryCcatch(query)
+    if(result.error)return result
     const categories = result.map(c=>c.category)
     return categories
 }
 
 exports.insertProduct = async (product) =>{
-    let query = 'insert into products (name, category, price, image, description ) values (?,?,?,?,?)'
-    const params = [product.name, product.category, product.price, product.image, product.description]
+    let query = 'insert into products (name, category, price, image,image_low, description ) values (?,?,?,?,?,?)'
+    const params = [product.name, product.category, product.price, product.image,product.image_low, product.description]
     const result = await tryCcatch(query, params)
     return result
 }

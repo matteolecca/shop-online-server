@@ -9,6 +9,7 @@ router.get('/', async (req,res) =>{
 router.get('/products', async (req,res) =>{
     console.log('CATEGORIES GETTED')
     const products = await dbAsync.getProducts()
+    console.log(products)
     if(products.error) return res.status(400).send()
     return res.send(products)
 })
